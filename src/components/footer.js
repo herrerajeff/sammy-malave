@@ -1,28 +1,16 @@
-import Container from './container'
+import { Link } from "gatsby";
+import React from "react";
+import Container from "./container";
+import Logo from './logo'
 
 export default function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://www.datocms.com/docs/next-js"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href="https://github.com/datocms/nextjs-demo"
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
+    <footer className="from-[#D795FF]/50 bg-gradient-to-t via-white">
+      <Container className="flex flex-col lg:flex-row justify-between items-center py-12 lg:py-20">
+        <p className="mb-8 lg:mb-0">All Rights Reserved. &copy; Sammy Malave {new Date().getFullYear()}</p>
+        <Link to="/">
+          <Logo classes="w-40" />
+        </Link>
       </Container>
     </footer>
   )

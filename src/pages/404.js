@@ -1,54 +1,23 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import App from '../components/app'
+import Container from '../components/container'
+import Footer from '../components/footer'
+import Header from '../components/header'
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
+export default function About() {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <App>
+      <Header />
+      <Container>
+        <div className='grid place-items-center relative w-full h-full rounded overflow-hidden p-20'>
+          <div className='text-white text-center'>
+        <h1 className='text-6xl'>404: You're lost.</h1>
+        <p className='text-white/70 text-xl'>That link does not exist. Use the navigation to find your way.</p>
+          </div>
+        <img src={'/weeknd.gif'} alt="The Weeknd Lost" className='absolute w-full h-full object-cover -z-10 filter grayscale brightness-50bgvfdsah' />
+        </div>
+      </Container>
+      <Footer />
+    </App>
   )
 }
-
-export default NotFoundPage
