@@ -7,6 +7,7 @@ import { graphql } from "gatsby";
 import Logo from "../components/logo";
 import Container from "../components/container";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { motion } from "framer-motion";
 
 export default function Index({ data: { allPosts, site, global } }) {
   const posts = allPosts.nodes
@@ -14,12 +15,23 @@ export default function Index({ data: { allPosts, site, global } }) {
   return (
     <App>
         <HelmetDatoCms seo={global.seo} favicon={site.favicon} />
-        <Header aboutPhoto={global.aboutPhoto.small} ig={global.instagramUsername} tw={global.emailAddress} email={global.emailAddress} />
+        <Header aboutPhoto={global.aboutPhoto.small} ig={global.instagramUsername} tw={global.twitterUsername} email={global.emailAddress} />
         <main>
           <Container className="grid grid-cols-1 lg:grid-cols-4 gap-y-12 lg:gap-y-20 gap-x-8">
-            <div className="lg:col-span-2 grid items-center">
-              <Logo classes="w-2/3 mx-auto lg:mx-0" />
-            </div>
+            <motion.div 
+              className="lg:col-span-2 grid content-between"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2}}
+            >
+              <Logo classes="w-2/3 mx-auto lg:mx-0 relative lg:mt-64" />
+              <motion.span 
+                className="text-5xl text-gray-400 font-extralight hidden lg:block"
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.7}}
+              >↓</motion.span>
+            </motion.div>
             {posts.map(post => {
               const WL50 = post.imageWidth.width.includes("Left - 50%")
               const WL75 = post.imageWidth.width.includes("Left - 75%")
@@ -28,19 +40,19 @@ export default function Index({ data: { allPosts, site, global } }) {
               const WR75 = post.imageWidth.width.includes("Right - 75%")
               
               return(  
-              <a href={post.slug} key={post.slug} className={`
+              <div href={post.slug} key={post.slug} className={`
               ${WL50 ? 'lg:col-span-2' : null}
               ${WL75 ? 'lg:col-span-3' : null}
               ${W100 ? 'lg:col-span-4' : null}
               ${WR50 ? 'lg:col-start-3 lg:col-end-5' : null}
-              ${WR75 ? 'lg:col-start-3 lg:col-end-5' : null} 
-              relative group overflow-hidden
+              ${WR75 ? 'lg:col-start-2 lg:col-end-5' : null} 
+              relative group overflow-clip
               `}>
-                <p className="absolute z-10 p-8 w-full text-right text-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 delay-100 mix-blend-exclusion grayscale">
+                <p className="absolute z-10 p-8 w-full text-right text-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 delay-100 mix-blend-exclusion grayscale pointer-events-none">
                   {post.title} - {post.date}
                 </p>
                 <GatsbyImage image={post.coverImage.large} alt={post.title} className="transform scale-100 group-hover:scale-125 transition-all duration-700 group-hover:blur-sm" />
-              </a>
+              </div>
             )})}
           </Container>
         </main>

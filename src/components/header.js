@@ -5,8 +5,8 @@ import { Dialog, Menu, Transition } from "@headlessui/react";
 import Logo from './logo'
 import { GatsbyImage } from "gatsby-plugin-image";
 
-export default function Header( {aboutPhoto, ig, tw, email} ) {
-  let [isOpen, setIsOpen] = useState(false)
+export default function Header( {aboutPhoto, ig, tw, email, openState} ) {
+  let [isOpen, setIsOpen] = useState(openState ? true : false)
   const toggle = () => setIsOpen(!isOpen)
   
   return (
