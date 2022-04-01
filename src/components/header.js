@@ -60,9 +60,9 @@ export default function Header( {aboutPhoto, ig, tw, email, openState} ) {
             Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
             </div>
           <div className="block space-x-4 mt-12">
-            <a href={`https://www.instagram.com/${ig}`} target="_blank" rel="nofollow noreferrer" className="border border-purple-400 py-1 px-3 rounded-full text-purple-400 hover:border-white hover:text-white transition-all duration-200 inline-block">Instagram&nbsp;↗️</a>
-            <a href={`mailto:${email}`} target="_blank" rel="nofollow noreferrer" className="border border-purple-400 py-1 px-3 rounded-full text-purple-400 hover:border-white hover:text-white transition-all duration-200 inline-block">Email&nbsp;↗️</a>
-            <a href={`https://www.twitter.com/${tw}`} target="_blank" rel="nofollow noreferrer" className="border border-purple-400 py-1 px-3 rounded-full text-purple-400 hover:border-white hover:text-white transition-all duration-200 inline-block">Twitter&nbsp;↗️</a>
+            <a href={`https://www.instagram.com/${ig}`} target="_blank" rel="nofollow noreferrer" className="border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block">Instagram&nbsp;↗️</a>
+            <a href={`mailto:${email}`} target="_blank" rel="nofollow noreferrer" className="border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block">Email&nbsp;↗️</a>
+            <a href={`https://www.twitter.com/${tw}`} target="_blank" rel="nofollow noreferrer" className="border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block">Twitter&nbsp;↗️</a>
           </div>
             </div>
             

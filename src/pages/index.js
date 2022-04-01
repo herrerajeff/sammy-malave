@@ -29,7 +29,7 @@ export default function Index({ data: { allPosts, site, global } }) {
                 className="text-5xl text-gray-400 font-extralight hidden lg:block"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.7}}
+                transition={{ duration: 1, delay: 0.7}}
               >↓</motion.span>
             </motion.div>
             {posts.map(post => {
