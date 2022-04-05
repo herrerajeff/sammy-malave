@@ -12,7 +12,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
 
   return (
     <div className='from-[#00D1FF]/50 bg-gradient-to-b via-white py-14 lg:mb-14'>
-      <Container className='flex justify-center lg:justify-end items-center py-8 lg:py-14 fixed inset-x-0 top-0 z-50'>
+      <Container className='flex justify-center lg:justify-end items-center py-8 lg:py-14 fixed inset-x-0 top-0 z-40'>
         <nav className='space-x-4 flex items-center'>
           <Button path='/'>Work</Button>
 
@@ -30,7 +30,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
           <Transition.Root show={isOpen} as={Fragment}>
             <Dialog
               onClose={setIsOpen}
-              className='fixed inset-0 z-10 overflow-y-auto'>
+              className='fixed inset-0 z-50 overflow-y-auto'>
               <Transition.Child
                 enter='duration-500 ease-out'
                 enterFrom='opacity-0'
@@ -86,7 +86,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                         <div className='space-y-4 text-sm lg:text-base'>
                           <StructuredText data={bio} />
                         </div>
-                        <div className='block space-x-4 mt-12'>
+                        <div className='flex gap-4 mt-12'>
                           <a
                             href={`https://www.instagram.com/${ig}`}
                             target='_blank'
