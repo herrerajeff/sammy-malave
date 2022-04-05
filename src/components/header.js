@@ -91,22 +91,58 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                             href={`https://www.instagram.com/${ig}`}
                             target='_blank'
                             rel='nofollow noreferrer'
-                            className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Instagram&nbsp;&#x2197;&#xFE0F;
+                            className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 flex items-center'>
+                            Instagram&nbsp;
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              width='16'
+                              height='16'
+                              viewBox='0 0 24 24'
+                              fill='none'
+                              stroke='currentColor'
+                              strokeWidth='2'
+                              strokeLinecap='round'
+                              strokeLinejoin='round'>
+                              <path d='M7 17l9.2-9.2M17 17V7H7' />
+                            </svg>
                           </a>
                           <a
                             href={`mailto:${email}`}
                             target='_blank'
                             rel='nofollow noreferrer'
-                            className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Email&nbsp;&#x2197;&#xFE0F;
+                            className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 flex items-center'>
+                            Email&nbsp;
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              width='16'
+                              height='16'
+                              viewBox='0 0 24 24'
+                              fill='none'
+                              stroke='currentColor'
+                              strokeWidth='2'
+                              strokeLinecap='round'
+                              strokeLinejoin='round'>
+                              <path d='M7 17l9.2-9.2M17 17V7H7' />
+                            </svg>
                           </a>
                           <a
                             href={`https://www.twitter.com/${tw}`}
                             target='_blank'
                             rel='nofollow noreferrer'
-                            className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Twitter&nbsp;&#x2197;&#xFE0F;
+                            className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 flex items-center'>
+                            Twitter&nbsp;
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              width='16'
+                              height='16'
+                              viewBox='0 0 24 24'
+                              fill='none'
+                              stroke='currentColor'
+                              strokeWidth='2'
+                              strokeLinecap='round'
+                              strokeLinejoin='round'>
+                              <path d='M7 17l9.2-9.2M17 17V7H7' />
+                            </svg>
                           </a>
                         </div>
                       </div>
@@ -137,10 +173,22 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                       rel='nofollow noreferrer'
                       className={` ${
                         active
-                          ? 'p-4 block bg-white text-black'
-                          : 'p-4 block bg-black text-white'
+                          ? 'p-4 bg-white text-black flex items-center'
+                          : 'p-4 bg-black text-white flex items-center'
                       } `}>
-                      Instagram&nbsp;&#x2197;&#xFE0F;
+                      Instagram&nbsp;
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        strokeWidth='2'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'>
+                        <path d='M7 17l9.2-9.2M17 17V7H7' />
+                      </svg>
                     </a>
                   )}
                 </Menu.Item>
@@ -152,10 +200,22 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                       rel='nofollow noreferrer'
                       className={` ${
                         active
-                          ? 'p-4 block bg-white text-black'
-                          : 'p-4 block bg-black text-white'
+                          ? 'p-4 bg-white text-black flex items-center'
+                          : 'p-4 bg-black text-white flex items-center'
                       } `}>
-                      Email&nbsp;&#x2197;&#xFE0F;
+                      Email&nbsp;
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        strokeWidth='2'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'>
+                        <path d='M7 17l9.2-9.2M17 17V7H7' />
+                      </svg>
                     </a>
                   )}
                 </Menu.Item>
@@ -167,10 +227,22 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                       rel='nofollow noreferrer'
                       className={` ${
                         active
-                          ? 'p-4 block bg-white text-black'
-                          : 'p-4 block bg-black text-white'
+                          ? 'p-4 bg-white text-black flex items-center'
+                          : 'p-4 bg-black text-white flex items-center'
                       } `}>
-                      Twitter&nbsp;&#x2197;&#xFE0F;
+                      Twitter&nbsp;
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        strokeWidth='2'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'>
+                        <path d='M7 17l9.2-9.2M17 17V7H7' />
+                      </svg>
                     </a>
                   )}
                 </Menu.Item>
