@@ -13,7 +13,7 @@ export default function About({ data }) {
         <div className='w-full h-full relative rounded overflow-hidden'>
           <div className='text-white absolute inset-0 grid place-items-center'>
             <div className='text-center p-12'>
-              <h1 className='text-6xl'>404: You're lost.</h1>
+              <h1 className='text-4xl md:text-6xl'>404: You're lost.</h1>
               <p className='text-white/70 text-xl'>
                 That link does not exist. Use the navigation to find your way.
               </p>
