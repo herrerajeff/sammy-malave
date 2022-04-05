@@ -23,7 +23,7 @@ export default function About({ data }) {
           <GatsbyImage
             image={data.global.lostImage.large}
             alt='The Weeknd Lost'
-            className='absolute inset-0 object-cover -z-10 filter grayscale brightness-50bgvfdsah'
+            className='absolute inset-0 w-full h-full object-cover -z-10 filter grayscale brightness-50bgvfdsah'
           />
         </div>
       </Container>
