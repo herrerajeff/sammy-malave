@@ -15,21 +15,21 @@ export default function Profile({ ig, tw, email, data: { links } }) {
           target='_blank'
           rel='nofollow noreferrer'
           className='py-3 px-4 w-full block bg-black text-white rounded hover:bg-cyan-400 hover:text-black transition-all duration-200'>
-          Instagram&nbsp;↗️
+          Instagram&nbsp;&#x2197;&#xFE0E;
         </a>
         <a
           href={`mailto:${email}`}
           target='_blank'
           rel='nofollow noreferrer'
           className='py-3 px-4 w-full block bg-black text-white rounded hover:bg-cyan-400 hover:text-black transition-all duration-200'>
-          Email&nbsp;↗️
+          Email&nbsp;&#x2197;&#xFE0E;
         </a>
         <a
           href={`https://www.twitter.com/${tw}`}
           target='_blank'
           rel='nofollow noreferrer'
           className='py-3 px-4 w-full block bg-black text-white rounded hover:bg-cyan-400 hover:text-black transition-all duration-200'>
-          Twitter&nbsp;↗️
+          Twitter&nbsp;&#x2197;&#xFE0E;
         </a>
         {profileLinks.map((link) => {
           return (
@@ -39,7 +39,7 @@ export default function Profile({ ig, tw, email, data: { links } }) {
               target='_blank'
               rel='nofollow noreferrer'
               className='py-3 px-4 w-full block bg-black text-white rounded hover:bg-cyan-400 hover:text-black transition-all duration-200'>
-              {link.name}&nbsp;↗️
+              {link.name}&nbsp;&#x2197;&#xFE0E;
             </a>
           )
         })}

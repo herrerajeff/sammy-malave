@@ -49,6 +49,24 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                   leaveFrom='opacity-100 scale-100'
                   leaveTo='opacity-0 scale-95'>
                   <div className='bg-black rounded p-8 relative'>
+                    <button
+                      type='button'
+                      onClick={toggle}
+                      className='text-white w-10 h-10 lg:w-8 lg:h-8 transition-all duration-300 absolute right-1/2 top-7 transform translate-x-1/2 lg:translate-x-0 lg:right-4 lg:top-4 hover:text-cyan-400 z-30'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        fill='none'
+                        viewBox='0 0 30 30'>
+                        <circle
+                          cx='15'
+                          cy='15'
+                          r='14.5'
+                          stroke='currentColor'></circle>
+                        <path
+                          fill='currentColor'
+                          d='M17.608 18.364L12 12.756l.756-.756 5.608 5.608-.756.756zm-4.852 0L12 17.608 17.608 12l.756.756-5.608 5.608z'></path>
+                      </svg>
+                    </button>
                     <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 mt-16 lg:mt-0'>
                       <Transition.Child
                         enter='duration-[1000ms] delay-100 ease-out'
@@ -74,43 +92,25 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                             target='_blank'
                             rel='nofollow noreferrer'
                             className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Instagram&nbsp;↗️
+                            Instagram&nbsp;&#x2192;
                           </a>
                           <a
                             href={`mailto:${email}`}
                             target='_blank'
                             rel='nofollow noreferrer'
                             className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Email&nbsp;↗️
+                            Email&nbsp;&#x2192;
                           </a>
                           <a
                             href={`https://www.twitter.com/${tw}`}
                             target='_blank'
                             rel='nofollow noreferrer'
                             className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Twitter&nbsp;↗️
+                            Twitter&nbsp;&#x2192;
                           </a>
                         </div>
                       </div>
                     </div>
-                    <button
-                      type='button'
-                      onClick={toggle}
-                      className='text-white w-10 h-10 lg:w-8 lg:h-8 transition-all duration-300 absolute right-1/2 top-9 transform translate-x-1/2 lg:translate-x-0 lg:right-4 lg:top-4 hover:text-cyan-400 z-30'>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 30 30'>
-                        <circle
-                          cx='15'
-                          cy='15'
-                          r='14.5'
-                          stroke='currentColor'></circle>
-                        <path
-                          fill='currentColor'
-                          d='M17.608 18.364L12 12.756l.756-.756 5.608 5.608-.756.756zm-4.852 0L12 17.608 17.608 12l.756.756-5.608 5.608z'></path>
-                      </svg>
-                    </button>
                   </div>
                 </Transition.Child>
               </div>
@@ -140,7 +140,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                           ? 'p-4 block bg-white text-black'
                           : 'p-4 block bg-black text-white'
                       } `}>
-                      Instagram&nbsp;↗️
+                      Instagram&nbsp;&#x2192;
                     </a>
                   )}
                 </Menu.Item>
@@ -155,7 +155,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                           ? 'p-4 block bg-white text-black'
                           : 'p-4 block bg-black text-white'
                       } `}>
-                      Email&nbsp;↗️
+                      Email&nbsp;&#x2192;
                     </a>
                   )}
                 </Menu.Item>
@@ -170,7 +170,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                           ? 'p-4 block bg-white text-black'
                           : 'p-4 block bg-black text-white'
                       } `}>
-                      Twitter&nbsp;↗️
+                      Twitter&nbsp;&#x2192;
                     </a>
                   )}
                 </Menu.Item>
@@ -182,9 +182,11 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
               xmlns='http://www.w3.org/2000/svg'
               width='24'
               height='24'
+              className='hidden lg:block'
               fill='currentColor'>
               <path d='M10 3H4a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V4a1 1 0 00-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 001-1V4a1 1 0 00-1-1h-6a1 1 0 00-1 1v6a1 1 0 001 1zm1-6h4v4h-4V5zM3 20a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1H4a1 1 0 00-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1h-6a1 1 0 00-1 1v6zm2-5h4v4h-4v-4z'></path>
             </svg>
+            <p className='block lg:hidden'>All</p>
           </Button>
         </nav>
       </Container>

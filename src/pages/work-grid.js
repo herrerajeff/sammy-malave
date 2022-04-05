@@ -15,7 +15,7 @@ export default function Index({ data: { allPosts } }) {
 
   return (
     <App>
-      <Container className='grid grid-cols-1 lg:grid-cols-4 gap-x-12 gap-y-20'>
+      <Container className='grid grid-cols-1 lg:grid-cols-4 gap-x-12 gap-y-20 mt-8 lg:mt-0'>
         {posts.map((post) => {
           return (
             <motion.div
@@ -23,15 +23,15 @@ export default function Index({ data: { allPosts } }) {
               key={post.slug}
               variants={item}
               className={`relative group lg:h-64`}>
-              <p className='absolute -bottom-16 z-10 p-8 w-full text-center text-black text-xs opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 delay-100'>
-                {post.title} - {post.date}
-              </p>
               <GatsbyImage
                 image={post.coverImage.small}
                 objectFit='contain'
                 alt={post.title}
-                className='transition-all duration-700 group-hover:opacity-70 h-full'
+                className='transition-all duration-700 lg:group-hover:opacity-70 lg:h-full'
               />
+              <p className='lg:absolute lg:-bottom-16 z-10 p-2 lg:p-8 w-full text-center text-gray-400 lg:text-black text-xs lg:opacity-0 lg:translate-y-3 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition duration-500 delay-100'>
+                {post.title} - {post.date}
+              </p>
             </motion.div>
           )
         })}

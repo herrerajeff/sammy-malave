@@ -18,7 +18,7 @@ export default function Index({ data: { allPosts } }) {
     <App>
       <Container className='grid grid-cols-1 lg:grid-cols-4 gap-y-12 lg:gap-y-20 gap-x-8'>
         <motion.div
-          className='lg:col-span-2 grid content-between'
+          className='lg:col-span-2 grid content-between my-8 lg:my-0'
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -54,14 +54,14 @@ export default function Index({ data: { allPosts } }) {
               ${WR75 ? 'lg:col-start-2 lg:col-end-5' : null} 
               relative group overflow-clip
               `}>
-                <p className='absolute z-10 p-8 w-full text-right text-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 delay-100 mix-blend-exclusion grayscale pointer-events-none'>
-                  {post.title} - {post.date}
-                </p>
                 <GatsbyImage
                   image={post.coverImage.large}
                   alt={post.title}
-                  className='transform scale-100 group-hover:scale-125 transition-all duration-700 group-hover:blur-sm'
+                  className='transform scale-100 lg:group-hover:scale-125 transition-all duration-700 lg:group-hover:blur-sm'
                 />
+                <p className='lg:absolute z-10 p-2 lg:p-8 w-full text-center lg:text-right text-gray-400 lg:text-white text-xs lg:text-base lg:top-0 lg:opacity-0 lg:translate-y-3 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition duration-500 delay-100 mix-blend-exclusion grayscale pointer-events-none'>
+                  {post.title} - {post.date}
+                </p>
               </motion.div>
             )
           })}
