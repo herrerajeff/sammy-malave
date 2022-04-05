@@ -92,21 +92,21 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                             target='_blank'
                             rel='nofollow noreferrer'
                             className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Instagram&nbsp;&#x2192;
+                            Instagram&nbsp;&#x2197;&#xFE0F;
                           </a>
                           <a
                             href={`mailto:${email}`}
                             target='_blank'
                             rel='nofollow noreferrer'
                             className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Email&nbsp;&#x2192;
+                            Email&nbsp;&#x2197;&#xFE0F;
                           </a>
                           <a
                             href={`https://www.twitter.com/${tw}`}
                             target='_blank'
                             rel='nofollow noreferrer'
                             className='border border-emerald-500 py-1 px-3 rounded-full text-emerald-500 hover:border-white hover:text-white transition-all duration-200 inline-block'>
-                            Twitter&nbsp;&#x2192;
+                            Twitter&nbsp;&#x2197;&#xFE0F;
                           </a>
                         </div>
                       </div>
@@ -140,7 +140,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                           ? 'p-4 block bg-white text-black'
                           : 'p-4 block bg-black text-white'
                       } `}>
-                      Instagram&nbsp;&#x2192;
+                      Instagram&nbsp;&#x2197;&#xFE0F;
                     </a>
                   )}
                 </Menu.Item>
@@ -155,7 +155,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                           ? 'p-4 block bg-white text-black'
                           : 'p-4 block bg-black text-white'
                       } `}>
-                      Email&nbsp;&#x2192;
+                      Email&nbsp;&#x2197;&#xFE0F;
                     </a>
                   )}
                 </Menu.Item>
@@ -170,7 +170,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                           ? 'p-4 block bg-white text-black'
                           : 'p-4 block bg-black text-white'
                       } `}>
-                      Twitter&nbsp;&#x2192;
+                      Twitter&nbsp;&#x2197;&#xFE0F;
                     </a>
                   )}
                 </Menu.Item>
