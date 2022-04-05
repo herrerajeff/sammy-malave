@@ -9,8 +9,8 @@ export default function About({ data }) {
 
   return (
     <App>
-      <Container className={'h-full'}>
-        <div className='grid place-items-center relative w-full h-full rounded overflow-hidden p-20'>
+      <Container className={'h-full relative'}>
+        <div className='grid place-items-center absolute inset-0 rounded overflow-hidden p-20'>
           <div className='text-white text-center'>
             <h1 className='text-6xl'>404: You're lost.</h1>
             <p className='text-white/70 text-xl'>
