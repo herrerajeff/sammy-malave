@@ -86,7 +86,7 @@ export default function Header({ aboutPhoto, ig, tw, email, bio, openState }) {
                         <div className='space-y-4 text-sm lg:text-base'>
                           <StructuredText data={bio} />
                         </div>
-                        <div className='flex gap-4 mt-12'>
+                        <div className='flex flex-wrap gap-4 mt-12'>
                           <a
                             href={`https://www.instagram.com/${ig}`}
                             target='_blank'
