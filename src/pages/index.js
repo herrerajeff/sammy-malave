@@ -23,7 +23,7 @@ export default function Index({ data: { allPosts } }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           key={1}>
-          <Logo classes='w-2/3 mx-auto lg:mx-0 relative lg:mt-64' />
+          <Logo classes='w-full lg:w-2/3 mx-auto lg:mx-0 relative lg:mt-64' />
           <motion.span
             className='text-5xl text-gray-400 font-extralight hidden lg:block'
             initial={{ opacity: 0, y: -30 }}
