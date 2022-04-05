@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-blog-demo",
+  "name": "sammy-malave",
   "version": "1.0.0",
   "private": true,
-  "description": "Gatsby Blog Demo",
-  "author": "Stefano Verna",
+  "license": "MIT",
+  "description": "The Portfolio of Sammy Malave",
+  "author": "Sammy Malave",
   "keywords": [
     "gatsby"
   ],
