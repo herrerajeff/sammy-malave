@@ -57,7 +57,7 @@ export default function Index({ data: { allPosts } }) {
                 <GatsbyImage
                   image={post.coverImage.large}
                   alt={post.title}
-                  className='transform scale-100 lg:group-hover:scale-125 transition-all duration-700 lg:group-hover:blur-sm'
+                  className='transform scale-100 lg:group-hover:scale-125 lg:group-hover:cursor-pointer transition-all duration-700 lg:group-hover:blur-sm'
                 />
                 <p className='lg:absolute z-10 p-2 lg:p-8 w-full text-center lg:text-right text-gray-400 lg:text-white text-xs lg:text-base lg:top-0 lg:opacity-0 lg:translate-y-3 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition duration-500 delay-100 mix-blend-exclusion grayscale pointer-events-none'>
                   {post.title} - {post.date}

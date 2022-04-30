@@ -27,7 +27,7 @@ export default function Index({ data: { allPosts } }) {
                 image={post.coverImage.small}
                 objectFit='contain'
                 alt={post.title}
-                className='transition-all duration-700 lg:group-hover:opacity-70 lg:h-full'
+                className='transition-all duration-700 lg:group-hover:opacity-70 lg:group-hover:cursor-pointer lg:h-full'
               />
               <p className='lg:absolute lg:-bottom-16 z-10 p-2 lg:p-8 w-full text-center text-gray-400 lg:text-black text-xs lg:opacity-0 lg:translate-y-3 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition duration-500 delay-100'>
                 {post.title} - {post.date}
