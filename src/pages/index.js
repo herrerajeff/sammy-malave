@@ -52,7 +52,7 @@ export default function Index({ data: { allPosts } }) {
               ${W100 ? 'lg:col-span-4' : null}
               ${WR50 ? 'lg:col-start-3 lg:col-end-5' : null}
               ${WR75 ? 'lg:col-start-2 lg:col-end-5' : null} 
-              relative group overflow-clip
+              relative group overflow-hidden
               `}>
                 <GatsbyImage
                   image={post.coverImage.large}
